@@ -23,6 +23,10 @@ form {
     align-items: center;
 }
 
+main {
+    min-height: 60vh;
+}
+
 form input,
 form button {
     padding: 0.5rem;
@@ -112,4 +116,82 @@ form button:hover {
     -ms-transform: translateY(8rem) rotateZ(20deg);
     -o-transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: white;
+    color: #ff6f47;
+}
+
+footer {
+    min-height: 20vh;
+    height: auto;
+}
+
+footer a {
+    color: white;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    min-height: 10vh;
+}
+
+.footer-wrapper p {
+    flex: 1 1 40rem;
+    padding: 1rem;
+}
+
+.footer-text {
+    text-align: left;
+    flex: 1 1 40rem;
+}
+
+footer ul {
+    display: flex;
+    flex: 1 1 40rem;
+    list-style: none;
+    justify-content: space-between;
+    align-items: right;
 }
